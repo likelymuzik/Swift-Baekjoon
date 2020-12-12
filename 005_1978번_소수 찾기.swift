@@ -10,15 +10,12 @@
 */
 
 /*
-
 아레니우스의 체....
 첫번째꺼는 냅두고 나머지 배수들은 모두 제거
-
 */
 
 let N = Int(readLine()!)!
 let numbers = readLine()!.split(separator: " ").map{Int($0)!}
-print(numbers)
 
 var visited = Array(repeating: false, count: 1001)
 var prime = [Int]()
@@ -29,7 +26,7 @@ for number in 2...1000 {
     visited[number] = true
   }
 
-  temp = number + number
+  var temp = number + number
   while temp < 1001 {
     visited[temp] = true
     temp = temp + number
